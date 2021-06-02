@@ -90,7 +90,7 @@ class Table extends Component {
                         <th scope="col">Last Name <span className="sortArrow" onClick={this.sortByLastName}></span></th>
                         <th scope="col">Phone</th>
                         <th scope="col">Email</th>
-                        <th scope="col">DoB</th>
+                        <th scope="col">Birthday</th>
                     </tr>
                 </thead>
                 {this.state.results && this.state.results.map(query => 

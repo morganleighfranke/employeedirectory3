@@ -1,5 +1,5 @@
 import React from 'react';
-
+// this is the nav bar component on the homepage
 function Navbar() {
     return (
         <nav className="navbar navbar-light justify-content-center">
