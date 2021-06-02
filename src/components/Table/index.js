@@ -3,21 +3,21 @@ import API from '../../utils/API';
 import Search from '../Search';
 import "./style.css";
 
-
+// This allows the table to use the react component 
 class Table extends Component {
+    // this allows the original state of search, results, and sort to start at null
     state = {
         search: "",
         results: [],
         sortByName: ""
     }
 
-    /* 75 Employees on API */
+// when the component mounts the page starts with all employees
     componentDidMount() {
-        this.searchEmployees("");
+        this.searchEmploye("");
     }
-
-    /* get function for API url */
-    searchEmployees = (query) => {
+// search the employee directory for an employee
+    searchEmploye = (query) => {
         // API.search(query) goes here
       API.getMultipleUsers(query)
           // .then this.setState
@@ -25,7 +25,7 @@ class Table extends Component {
         .catch((err) => console.log(err));
     };
 
-    /* Search handle */
+//    take the search term and make it lowercase
     handleInputChange = event => {
       if (event.target.name === "search") {
           const search = event.target.value.toLowerCase();
@@ -34,8 +34,7 @@ class Table extends Component {
           })
       }
     };
-
-    /* Sort by FIRST NAME */
+// sort the results by first name 
     sortByFirstName = () => {
         const filteredEmployees = this.state.results.sort((a, b) => {
           if (b.name.first > a.name.first) {
@@ -56,7 +55,7 @@ class Table extends Component {
         this.setState({ results: filteredEmployees })
     };
     
-    /* Sort by LAST NAME */
+// sort the results by last name
     sortByLastName = () => {
         const filteredEmployees = this.state.results.sort((a, b) => {
           if (b.name.last > a.name.last) {
@@ -75,7 +74,7 @@ class Table extends Component {
         }
         this.setState({ results: filteredEmployees })
     };
-
+// this is where react takes the code above and renders it to the index.html
     render(){
     return (
         <div>

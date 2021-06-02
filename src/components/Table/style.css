@@ -1,11 +1,13 @@
+/* This code styles the carrot arrow next to first and last name to allow the user to sort results in ascending or descending order */
+
 .sortArrow {
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
     cursor: pointer; /* Pointer/hand icon */
     border-top: 5px solid green;
-    margin-top: 60px;
+    margin-top: 50px;
     position: relative;
-    top: 15px;
-    left: 10px;
+    top: 10px;
+    left: 15px;
   }
   
