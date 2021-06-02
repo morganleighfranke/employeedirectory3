@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import API from '../../utils/API';
-import SearchForm from '../SearchForm';
+import Search from '../Search';
 import "./style.css";
 
 
@@ -79,7 +79,7 @@ class Table extends Component {
     render(){
     return (
         <div>
-            <SearchForm 
+            <Search
             search={this.state.search}
             handleInputChange={this.handleInputChange} />
             <div className="container mt-3">
